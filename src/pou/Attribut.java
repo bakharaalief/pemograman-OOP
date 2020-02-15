@@ -1,15 +1,24 @@
 package pou;
 
 public class Attribut {
+    //declare
+    private String name;
+    private int energy;
+    private boolean cleanest;
+    private int happinest;
+    private int full = 0;
+
 
     //constructor
     public Attribut(){
-
+        name = "kosong";
+        energy = 0;
+        cleanest = false;
+        happinest = 0;
+        full = 0;
     }
 
     //name
-    private String name = "kosong";
-
     public void setName(String nama) {
         this.name = nama;
     }
@@ -19,9 +28,7 @@ public class Attribut {
     }
 
     //energi
-    private int energy = 0;
-
-    public void setEnergy(int energy) {
+    public void plusEnergy(int energy) {
         this.energy += energy;
     }
 
@@ -30,8 +37,6 @@ public class Attribut {
     }
 
     //cleanest
-    private boolean cleanest = false;
-
     public void setCleanest(boolean cleanest) {
         this.cleanest = cleanest;
     }
@@ -41,9 +46,7 @@ public class Attribut {
     }
 
     //happinest
-    private int happinest = 0;
-
-    public void setHappinest(int happinest){
+    public void plusHappinest(int happinest){
         this.happinest += happinest;
     }
 
@@ -52,9 +55,7 @@ public class Attribut {
     }
 
     //full
-    private int full = 0;
-
-    public void setFull(int full) {
+    public void plusFull(int full) {
         this.full += full;
     }
 

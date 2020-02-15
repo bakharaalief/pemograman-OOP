@@ -1,42 +1,46 @@
 package pou;
 
 public class Activity {
-    //ngambil attribut
+    //create object attribut
     Attribut at = new Attribut();
 
     //ngasih nama
     public void nama(String namaInput){
         at.setName(namaInput);
-        System.out.println("ngasih nama");
+        System.out.println("Selamat datang, " + namaInput);
     }
 
     //ngasih makan
-    public void makan(){
-        at.setHappinest(5);
-        at.setFull(10);
-        System.out.println("ngasih makan");
+    public void makan(int makanInput){
+        at.plusHappinest(5);
+        at.plusFull(makanInput);
+        System.out.println("diberi makan sebanyak " + makanInput + " makanan" );
     }
 
     //ngasih mandi
     public void mandi(){
-        at.setHappinest(5);
+        at.plusHappinest(5);
         at.setCleanest(true);
-        System.out.println("ngasih mandi");
+        System.out.println("Dimandikan");
     }
 
     //ngasih tidur
     public void tidur(){
-        at.setHappinest(5);
-        at.setEnergy(10);
-        System.out.println("ngasih tidur");
+        at.plusHappinest(5);
+        at.plusEnergy(10);
+        System.out.println("Ditidurkan");
     }
 
     //cek keadaan
     public void keadaan(){
+        System.out.println("+==================+");
+        System.out.println("Keadaan " + at.getName());
+        System.out.println("+==================+");
         System.out.println("Nama    : " + at.getName());
         System.out.println("Bahagia : " + at.getHappinest());
         System.out.println("Bersih  : " + at.isCleanest());
         System.out.println("Energy  : " + at.getEnergy());
         System.out.println("kenyang : " + at.getFull());
+        System.out.println("+==================+");
     }
 }
