@@ -13,7 +13,9 @@ public class Activity {
     //ngasih makan
     public void makan(int makanInput){
         at.plusHappinest(5);
+        at.plusEnergy(makanInput/100);
         at.plusFull(makanInput);
+        at.setCleanest(false);
         System.out.println("diberi makan sebanyak " + makanInput + " makanan" );
     }
 
@@ -38,7 +40,7 @@ public class Activity {
         System.out.println("+==================+");
         System.out.println("Nama    : " + at.getName());
         System.out.println("Bahagia : " + at.getHappinest());
-        System.out.println("Bersih  : " + at.isCleanest());
+        System.out.println("Badan  : " + (at.isCleanest()? "Bersih" : "Kotor") );
         System.out.println("Energy  : " + at.getEnergy());
         System.out.println("kenyang : " + at.getFull());
         System.out.println("+==================+");

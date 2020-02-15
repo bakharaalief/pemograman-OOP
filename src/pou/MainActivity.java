@@ -13,7 +13,7 @@ public class MainActivity {
         ac.tidur();
         ac.mandi();
 
-        //keadaan
+        //keadaan 1
         ac.keadaan();
 
         //hari2
@@ -21,7 +21,7 @@ public class MainActivity {
         System.out.println("+------------------+");
         ac.makan(20);
 
-        //keadaan
+        //keadaan 2
         ac.keadaan();
     }
 }

@@ -3,10 +3,10 @@ package pou;
 public class Attribut {
     //declare
     private String name;
-    private int energy;
+    private double energy;
     private boolean cleanest;
-    private int happinest;
-    private int full = 0;
+    private double happinest;
+    private double full;
 
 
     //constructor
@@ -32,7 +32,7 @@ public class Attribut {
         this.energy += energy;
     }
 
-    public int getEnergy() {
+    public double getEnergy() {
         return energy;
     }
 
@@ -50,7 +50,7 @@ public class Attribut {
         this.happinest += happinest;
     }
 
-    public int getHappinest() {
+    public double getHappinest() {
         return happinest;
     }
 
@@ -59,7 +59,7 @@ public class Attribut {
         this.full += full;
     }
 
-    public int getFull() {
+    public double getFull() {
         return full;
     }
 
