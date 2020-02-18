@@ -7,6 +7,7 @@ public class Attribut {
     private boolean cleanest;
     private double full;
     private double healty;
+    private boolean happinest;
 
 
     //constructor
@@ -16,6 +17,7 @@ public class Attribut {
         cleanest = false;
         healty = 0;
         full = 0;
+        happinest = false;
     }
 
     //name
@@ -62,5 +64,10 @@ public class Attribut {
     public void minusHealty(double healty) { this.healty -= healty; };
 
     public double getHealty() {return healty;};
+
+    //happinest
+    public void setHappinest(boolean happinest){ this.happinest = happinest; };
+
+    public boolean isHappinest(){return happinest; };
 
 }

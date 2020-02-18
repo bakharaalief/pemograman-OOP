@@ -4,6 +4,10 @@ public class Activity {
     //create object attribut
     Attribut at = new Attribut();
 
+    public void nama(String nama){
+        at.setName(nama);
+    }
+
     //makan
     public void makan(double makanInput){
         //jika sudah lebih dari 50
@@ -56,6 +60,12 @@ public class Activity {
         System.out.println(at.getName() + ": " + "\" Terima Kasih sudah memberiku obat \" ");
     }
 
+    //elus
+    public void elus(){
+        at.setHappinest(true);
+        System.out.println(at.getName() + ": " + "\" Terima Kasih sudah di elus \" ");
+    }
+
 
 
     //cek keadaan
@@ -65,8 +75,8 @@ public class Activity {
         System.out.println("+==================+");
         System.out.println("Badan     : " + (at.isCleanest()? "Bersih" : "Kotor") );
         System.out.println("Kesehatan : " + at.getHealty());
+        System.out.println("Senang    : " + (at.isHappinest()? "Iya" : "Tidak"));
         System.out.println("Energy    : " + at.getEnergy());
         System.out.println("kenyang   : " + at.getFull());
-        System.out.println("+==================+");
     }
 }

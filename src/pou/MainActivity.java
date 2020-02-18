@@ -7,6 +7,7 @@ public class MainActivity {
         //declare
         boolean status = true;
         boolean status2 = true;
+        String nameInput = "";
         int numberMenu = 0;
         int counter = 0;
 
@@ -27,38 +28,34 @@ public class MainActivity {
             }
 
             else{
-                System.out.println("+===============+");
 
-//                while (status2){
-//                    //ketika hewan masih belum puya nama
-//                    System.out.println("Selamat Datang di Tamagochi");
-//                    System.out.println("Hewan mu belum punya nama");
-//                    System.out.print("masukkan nama : ");
-//                    String nameInput = input.next();
-//
-//                    //ketika nama yang diinput sudah lebih dari lima
-//                    if (nameInput.length() > 5 ){
-//                        at.setName(nameInput);
-//                        status2 = false;
-//                    }
-//
-//                    //notice yang ditampilkan ketika nama kurang dari  5 huruf
-//                    else{
-//                        System.out.println("masukkan kembali nama, minimal 5 huruf");
-//                    }
-//                }
+                while (status2){
+                    //ketika hewan masih belum puya nama
+                    System.out.println("+===============+");
+                    System.out.println("Selamat Datang di Tamagochi");
+                    System.out.println("Hewan mu belum punya nama");
+                    System.out.print("masukkan nama : ");
+                    nameInput = input.next();
+
+                    //ketika nama yang diinput sudah lebih dari lima
+                    if (nameInput.length() >= 3 ){
+                        ac.nama(nameInput);
+                        status2 = false;
+                    }
+
+                    //notice yang ditampilkan ketika nama kurang dari  5 huruf
+                    else{
+                        System.out.println("masukkan kembali nama, minimal 3 huruf");
+                    }
+                }
 
                 //Menu table
                 System.out.println("+===============+");
-                System.out.println("Selamat Datang, " + at.getName() + " :)");
+                System.out.println("Selamat Datang, " + nameInput + " :)");
                 System.out.println("Pilihan Menu : ");
-                System.out.println("[1] Makan");
-                System.out.println("[2] Tidur");
-                System.out.println("[3] Mandi");
-                System.out.println("[4] Main");
-                System.out.println("[5] Minum Obat");
-                System.out.println("[6] Status");
-                System.out.println("[99] Exit ");
+                System.out.println("[1] Makan | [4] Main       | [7] Status");
+                System.out.println("[2] Tidur | [5] Minum Obat | [8] Soon ");
+                System.out.println("[3] Mandi | [6] Elus       | [99] Exit");
 
                 //input number menu
                 System.out.print("masukkan angka : ");
@@ -104,6 +101,7 @@ public class MainActivity {
                     }
                 }
 
+                //input number 5 (obat)
                 else if (numberMenu == 5){
 
                     //ketika sudah memberi obat lebih dari 3 kali
@@ -131,13 +129,18 @@ public class MainActivity {
                             amount = input.nextInt();
                         }
 
-                        counter++;
                         ac.obat(amount);
+                        counter++;
                     }
                 }
 
-                //input number 6 (keadaan)
+                //input number 6 (elus)
                 else if(numberMenu == 6){
+                    ac.elus();
+                }
+
+                //input number 7 (keadaan)
+                else if(numberMenu == 7){
                     ac.keadaan();
                 }
 
