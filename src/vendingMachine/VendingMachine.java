@@ -64,13 +64,17 @@ public class VendingMachine {
 
     public void tambahStock(String namaBarang, double hargaBarang, int literBarang, int jumlahStock){
         //syarat harus dibawah 50 dan liter lebih dari 1000
-        if( totalBarang() - jumlahStock < 50 && totalLiter() - literBarang*jumlahStock < 1000){
+        if( totalBarang() + jumlahStock <= 50 && totalLiter() + literBarang*jumlahStock <= 1000){
             this.namaBarang.add(namaBarang);
             this.hargaBarang.add(hargaBarang);
             this.literBarang.add(literBarang);
             this.stockBarang.add(jumlahStock);
 
             System.out.println(namaBarang + " Berhasil ditambah ke Stock ");
+        }
+
+        else{
+            System.out.println(namaBarang + " Maaf gagal ditambah ke Stock karena Penuh ");
         }
 
     }
