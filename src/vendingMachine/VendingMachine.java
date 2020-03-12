@@ -12,26 +12,6 @@ public class VendingMachine {
     private int barangBeli;
     private int codeBarang;
 
-//    //getNamaBarang
-//    public String getNamaBarang(int code){
-//        return this.namaBarang.get(code);
-//    }
-//
-//    //getHargaBarang
-//    public Double getHargaBarang(int code){
-//        return this.hargaBarang.get(code);
-//    }
-//
-//    //getStockBarang
-//    public int getStockBarang(int code){
-//        return this.stockBarang.get(code);
-//    }
-//
-//    //getLiterBarang
-//    public int getLiterBarang(int code){
-//        return this.literBarang.get(code);
-//    }
-
     //listBarang
     public void listStock(){
         //banyak data
