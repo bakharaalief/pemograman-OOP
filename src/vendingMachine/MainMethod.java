@@ -18,12 +18,18 @@ public class MainMethod {
         vending.listStock();
 
         //cek harga
-        vending.cekHargaBarang(0,50);
+        vending.cekHargaBarang(0,20);
+
+        //cek saldo
+        gopay.cekSaldo();
 
         //bayar barang
-        vending.bayarBarang(200000,gopay);
+        vending.bayarBarang(100000,gopay);
 
         //mencek stock
         vending.listStock();
+
+        //cek saldo
+        gopay.cekSaldo();
     }
 }
