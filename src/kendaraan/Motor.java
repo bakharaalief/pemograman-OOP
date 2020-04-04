@@ -1,12 +1,12 @@
 package kendaraan;
 
-public class Motor extends Kendaraan {
+public class Motor extends Kendaraan implements Pajak{
     private String warnaJok;
 
-    public Motor(int jumlahRoda, String bahanBakar, int mesin, String warnaJok){
+    public Motor(int jumlahRoda, String bahanBakar, int mesin, String warnaJok, double harga){
 
         //memasukkan data ke method constructor super class
-        super(jumlahRoda, bahanBakar, mesin);
+        super(jumlahRoda, bahanBakar, mesin, harga);
         this.warnaJok = warnaJok;
 
     }
@@ -14,10 +14,12 @@ public class Motor extends Kendaraan {
     @Override
     public void deskripsi(){
         System.out.println("Motor");
-        System.out.println("jumlah roda : " + super.jumlahRoda);
-        System.out.println("bahan bakar : " + super.bahanBakar);
-        System.out.println("mesin       : " + super.mesin);
+        super.deskripsi();
         System.out.println("warna jok   : " + warnaJok);
     }
 
+    @Override
+    public void hitungPajak() {
+        System.out.println("pajak : " + persen * harga );
+    }
 }

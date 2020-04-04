@@ -1,10 +1,10 @@
 package kendaraan;
 
-public class Mobil extends Kendaraan {
+public class Mobil extends Kendaraan implements Pajak{
     private int jumlahPintu;
 
-    public Mobil(int jumlahRoda, String bahanBakar, int mesin, int jumlahPintu){
-        super(jumlahRoda, bahanBakar, mesin);
+    public Mobil(int jumlahRoda, String bahanBakar, int mesin, int jumlahPintu, double harga){
+        super(jumlahRoda, bahanBakar, mesin, harga);
 
         this.jumlahPintu = jumlahPintu;
     }
@@ -12,10 +12,12 @@ public class Mobil extends Kendaraan {
     @Override
     public void deskripsi(){
         System.out.println("Mobil");
-        System.out.println("jumlah roda : " + super.jumlahRoda);
-        System.out.println("bahan bakar : " + super.bahanBakar);
-        System.out.println("mesin       : " + super.mesin);
+        super.deskripsi();
         System.out.println("jumlah pintu: " + jumlahPintu);
     }
 
+    @Override
+    public void hitungPajak() {
+        System.out.println("pajak : " + persen * harga * jumlahRoda );
+    }
 }
